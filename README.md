@@ -13,6 +13,16 @@ In this project, the software architecture should be able to get the user reques
 * The Robot can be obsereved in both Rviz and Gazebo environments as follows.
 
 
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/map_01.png" width="500" height="300">
+</p>
+
+
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/map_02_rviz.png" width="500" height="300">
+</p>
+
+
 This represents the point of view from Rviz. Rviz is a 3D visualization tool for ROS applications. It offers a view of the robot model, acquires sensor information from the robot sensors, and reproduces the acquired data. It can display data from video cameras, lasers, 3D and 2D devices, including images and point clouds. To obtain this result the robot must have explored all the surroundings since with the gmapping algorithm we do not have a totale knowledge of the environment, whereas with a pre-existing map we do.
 
 
@@ -58,7 +68,9 @@ The purpose of this node is showing an interface in which the user can choose di
 
 The interface is simply designed as a list of commands as follows:
 
-
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/interface.png" width="500" height="300">
+</p>
 
 
 (I) Autonomous XY-Position Node
@@ -68,7 +80,9 @@ Every goal is tracked by the node with its `id`, that is randomly generated insi
 
 
 ## Nodes struscture
-
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/mode01.jpg" width="600" height="500">
+</p>
 
 After establishing the position, the user can at any time cancel the goal (pressing the `q` key) and quit the execurtion (pressing the `s` key).
 If one of the above keys is pressed, a message of type `actionlib_msgs/GoalID` is generated and then published in the `/move_base/cancel` topic to cancel the goal.
@@ -90,10 +104,15 @@ Each specific key modifies the above mentioned variables to drive the robot thro
 An interface has been considered as a list of the commands to move the robot and increase/decrease velocities as follows:
 
 
-
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/keyboard.png" width="500" height="300">
+</p>
 
 ## Nodes struscture
 
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/mode02.jpg" width="500" height="300">
+</p>
 
 
 
@@ -110,7 +129,9 @@ To manage obstacle avoidance the robot laser scanner is used,and the node subscr
 ## Nodes struscture
 
 
-
+<p align="center">
+<img src="https://github.com/hrtreza/ResearchTrack1_Assignment3/blob/main/images/mode03.jpg" width="500" height="300">
+</p>
 
 Pseudo code
 ----------------------
